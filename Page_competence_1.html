@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html xmlns="titouan_quillevere.fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Portfolio de Titouan Quillévéré</title>
+        <link rel="stylesheet" href="Style_pp.css">
+        <Style>
+            .paragraphe_explication_comp{
+                width: 30em;
+            }
+
+            .article_explication_comp{
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: -10em;
+            }
+
+            .article_explication_comp > img{
+                margin-right: 1.5em;
+                margin-left: 1.5em;
+            }
+            section{
+                margin: 4em 0 2em 0;
+            }
+        </Style>
+    </head>
+    <body>
+        <header id="lien_acceuil"  class="animated-background">
+            <ul class="animated-background">
+                <li class="centrage">
+                    <a href="Page_principale.html">// home</a>
+                </li>
+                <li class="centrage">
+                    <a href="Page_principale.html">// présentation</a>
+                </li>
+                <li class="centrage">
+                    <a href="#lien_competence">// compétences</a>
+                </li>
+                <li class="contact">
+                    <a href="#lien_contact">// contact</a>
+                </li>
+                <li class="centrage">
+                    <a href="cv.pdf" download>// mon CV</a>
+                </li>
+                <li>
+                    <a class="lien_linkedin" href="https://www.linkedin.com/in/titouan-quill%C3%A9v%C3%A9r%C3%A9/"><img class="image_linkedin" src="image_a_inclure_page/autres/logo_linkedin.png" alt="Logo de linkedin"></a>
+                </li>
+            </ul>
+            <h2>Titouan Quillévéré</h2>
+            <h1>Développer des applications informatiques simples</h1>
+        </header>
+        <div>
+            <section>
+                <article class="article_explication_comp">
+                    <h3>Le jeu du Snake&nbsp;</h3>
+                    <img src="image_a_inclure_page/photo_competence/code_en_c.png" alt="Image du code en C">
+                    <p class="paragraphe_explication_comp">
+                        Durant ma formation à l’IUT, j’ai eu la chance de développer le jeu du Snake. 
+                        Ce jeu est très simple : un serpent, guidé par l’utilisateur avec les touches z, q, 
+                        s, d, a pour objectif de manger le plus de pommes possible. Ici, notre jeu est codé en langage C.
+                        L’exécution de ce jeu nécessite un compilateur C pour passer notre code en un fichier exécutable 
+                        par l’ordinateur. Lors de ce projet, nous avons introduit la notion de stratégie de test. 
+                        Ces stratégies permettent au développeur de gagner beaucoup de temps lorsqu’il veut s’assurer de la 
+                        bonne exécution de son programme. Le développement de ce jeu m’a permis d’améliorer mes connaissances
+                        en langage C, mais aussi approfondir ma réflexion algorithmique. Je vous donne la possibilité d’essayer
+                        ce jeu avec un exécutable simplement sur un terminal Linux grâce à la commande suivante :
+                        ./nom_du_fichier.<br> <a href="snake" download>Fichier executable du jeu Snake</a>.
+                    </p>
+                    <img src="image_a_inclure_page/photo_competence/snake101v4.png" alt="Image du jeu snake sur terminal">
+                </article>
+                <article class="article_explication_comp">
+                    <h3>Le jeu du Pendu</h3>
+                    <img src="image_a_inclure_page/photo_competence/code_phyton_pendu.png" alt="Image du code Python">
+                    <p class="paragraphe_explication_comp">
+                        Au lycée, lors de l’année de terminal, nous avons développé le jeu populaire du pendu. 
+                        Petit rappel de règles : vous avez pour objectifs de trouver un mot caché en utilisant 
+                        les lettres de l’alphabet. Attention, passé les 10 erreurs, vous aurez perdu ! 
+                        Le développement de ce jeu c’est fait en Python. Nous avons au préalable programmer 
+                        les classes objets File et Pile. L’objectif était de traiter l’affichage et le traitement 
+                        des lettres avec ces méthodes. Après la création de fonctions permettant au programme 
+                        principal de jouer le jeu, nous avons géré le dessin du pendu avec la librairie Python Turtle. 
+                        La manipulation de plusieurs fichiers, de classes objets, de listes et de fonctions rend ce 
+                        projet plutôt complet pour un premier Jeu avec Python.
+                    </p>
+                    <img src="image_a_inclure_page/photo_competence/jeu_du_pendu.png" alt="Image du jeu du pendu">
+                </article>
+                <article class="article_explication_comp">
+                    <h3>Première appli&nbsp;&nbsp;&nbsp;</h3>
+                    <img src="image_a_inclure_page/photo_competence/cliche2_201.png" alt="Image du Java de l'application">
+                    <p class="paragraphe_explication_comp">
+                        Au cours du semestre, nous avons réalisé une application en Java en utilisant le framework 
+                        JavaFX. Ce projet s'inscrit dans la continuité de notre apprentissage en conception orientée 
+                        objet et en développement d’interfaces graphiques. Nous avons débuté par la création de diagrammes 
+                        UML afin de modéliser l’architecture de l’application, développée pour répondre aux besoins d’une 
+                        association de danse. L’interface homme-machine (IHM) a été conçue avec SceneBuilder, en mettant 
+                        l’accent sur l’ergonomie pour garantir une utilisation simple, intuitive et agréable pour l’utilisateur 
+                        final. Nous avons également mis en place une phase de tests fonctionnels afin de valider le bon 
+                        comportement de l'application et corriger les éventuelles anomalies. Ce projet nous a permis de 
+                        consolider nos compétences en modélisation, en développement Java, en conception d’interfaces utilisateurs 
+                        et en assurance qualité logicielle.
+                    </p>
+                    <img src="image_a_inclure_page/photo_competence/ihm.png" alt="Image d'une page IHM de l'application">
+                </article>
+            </section>
+        </div>
+        <div id="lien_competence" class="menu-container">
+            <button id="leftBtn">&lt;</button>
+            <div id="blocksContainer"></div>
+            <button id="rightBtn">&gt;</button>
+        </div>
+        <script>
+            const leftBtn = document.getElementById('leftBtn');
+            const rightBtn = document.getElementById('rightBtn');
+            const blocksContainer = document.getElementById('blocksContainer');
+
+            const allBlocks = [
+                {
+                    text: "Développer des applications informatiques simples",
+                    img: "image_a_inclure_page/photo_bloc_competence/progdappli.png",
+                    link: "Page_competence_1.html"
+                },
+                {
+                    text: "Appréhender et construire des algorithmes\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0",
+                    img: "image_a_inclure_page/photo_bloc_competence/comparaison%20algo.png",
+                    link: "Page_competence_2.html"
+                },
+                {
+                    text: "Installer et configurer un poste de travail \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0",
+                    img: "image_a_inclure_page/photo_bloc_competence/sae103.png",
+                    link: "Page_competence_3.html"
+                },
+                {
+                    text: "Concevoir et mettre en place une base de données",
+                    img: "image_a_inclure_page/photo_bloc_competence/sql.png",
+                    link: "Page_competence_4.html"
+                },
+                {
+                    text: "Identifier les besoins métiers des clients et des utilisateurs",
+                    img: "image_a_inclure_page/photo_bloc_competence/gestionproj.png",
+                    link: "Page_competence_5.html"
+                },
+                {
+                    text: "Identifier ses aptitudes pour travailler dans une équipe",
+                    img: "image_a_inclure_page/photo_bloc_competence/sae206.png",
+                    link: "Page_competence_6.html"
+                }
+            ];
+
+            let visibleIndexes = [0, 1, 2];
+            let hiddenIndexes = [3, 4, 5];
+
+            function renderBlocks() {
+                blocksContainer.innerHTML = '';
+                visibleIndexes.forEach(idx => {
+                const block = allBlocks[idx];
+
+                const article = document.createElement('article');
+                article.className = 'article_competences';
+
+                // Titre (non cliquable)
+                const title = document.createElement('h3');
+                title.textContent = block.text;
+                title.style.marginBottom = '10px';
+
+                // Image
+                const img = document.createElement('img');
+                img.src = block.img;
+                img.alt = block.text;
+
+                // Lien cliquable en dessous
+                const link = document.createElement('a');
+                link.href = block.link;
+                link.textContent = "En savoir plus →";
+                link.style.marginTop = 'auto';
+
+                article.appendChild(title);
+                article.appendChild(img);
+                article.appendChild(link);
+                blocksContainer.appendChild(article);
+                });
+            }
+
+
+            function scrollRight() {
+                if (hiddenIndexes.length === 0) return;
+                const hideBlock = visibleIndexes.shift();
+                const showBlock = hiddenIndexes.shift();
+                visibleIndexes.push(showBlock);
+                hiddenIndexes.push(hideBlock);
+                renderBlocks();
+            }
+
+            function scrollLeft() {
+                if (hiddenIndexes.length === 0) return;
+                const hideBlock = visibleIndexes.pop();
+                const showBlock = hiddenIndexes.pop();
+                visibleIndexes.unshift(showBlock);
+                hiddenIndexes.unshift(hideBlock);
+                renderBlocks();
+            }
+
+            leftBtn.addEventListener('click', scrollLeft);
+            rightBtn.addEventListener('click', scrollRight);
+
+            renderBlocks();
+        </script>
+        <footer class="animated-background">
+            <h2 id="lien_contact">Mes informations : </h2>
+            <section>
+                <article>
+                    <p>
+                        Retrouvez-moi sur linkedin : <a href="https://www.linkedin.com/in/titouan-quill%C3%A9v%C3%A9r%C3%A9/">Titouan Quillévéré</a>
+                        <br>
+                        Mon numéro de téléphone : 06 85 35 15 05
+                        <br>
+                        Mon adresse mail : titouan.quillevere@gmail.com
+                    </p>
+                </article>
+            </section>
+            <h2>Mes références : </h2>
+            <section>
+                <article>
+                    <p>
+                        Université : <a href="https://iut-lannion.univ-rennes.fr/">IUT de Lannion</a> 22300 Côtes-d'Armor
+                        <br>
+                        Lycée : <a href="https://www.oceanopolis.com/">Elorn Landerneau</a> 29800 Finistère
+                        <br>
+                        
+                    </p>
+                </article>
+            </section>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="Page_principale.html">// home</a>
+                    </li>
+                    <li>
+                        <a href="Page_principale.html">// présentation</a>
+                    </li>
+                    <li>
+                        <a href="#lien_competence">// compétences</a>
+                    </li>
+                    <li>
+                        <a href="cv.pdf" download>// mon CV</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html xmlns="titouan_quillevere.fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Portfolio de Titouan Quillévéré</title>
+        <link rel="stylesheet" href="Style_pp.css">
+        <Style>
+            .paragraphe_explication_comp{
+                width: 30em;
+            }
+
+            .article_explication_comp{
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: -10em;
+            }
+
+            .article_explication_comp > img{
+                margin-right: 1.5em;
+                margin-left: 1.5em;
+            }
+            section{
+                margin: 4em 0 2em 0;
+            }
+        </Style>
+    </head>
+    <body>
+        <header id="lien_acceuil"  class="animated-background">
+            <ul class="animated-background">
+                <li class="centrage">
+                    <a href="Page_principale.html">// home</a>
+                </li>
+                <li class="centrage">
+                    <a href="Page_principale.html">// présentation</a>
+                </li>
+                <li class="centrage">
+                    <a href="#lien_competence">// compétences</a>
+                </li>
+                <li class="contact">
+                    <a href="#lien_contact">// contact</a>
+                </li>
+                <li class="centrage">
+                    <a href="cv.pdf" download>// mon CV</a>
+                </li>
+                <li>
+                    <a class="lien_linkedin" href="https://www.linkedin.com/in/titouan-quill%C3%A9v%C3%A9r%C3%A9/"><img class="image_linkedin" src="image_a_inclure_page/autres/logo_linkedin.png" alt="Logo de linkedin"></a>
+                </li>
+            </ul>
+            <h2>Titouan Quillévéré</h2>
+            <h1>Appréhender et construire des algorithmes</h1>
+        </header>
+        <div>
+            <section>
+                <article class="article_explication_comp">
+                    <h3>KNN et KMEANS</h3>
+                    <img src="image_a_inclure_page/photo_competence/comparaison algo.png" alt="Image des clusters colorés pour l'algo KNN">
+                    <p class="paragraphe_explication_comp">
+                        Durant ma formation, j’ai découvert deux algorithmes fondamentaux en science des données 
+                        : KNN (K-Nearest Neighbors) et KMEANS. Bien qu’ils partagent un nom similaire, ils répondent 
+                        à des objectifs très différents. L’algorithme KNN fonctionne par proximité : il attribue 
+                        une étiquette à un élément en fonction de ses voisins les plus proches.
+                        C’est un algorithme de classification supervisée.
+                        De son côté, KMEANS permet de créer des clusters (groupes) en fonction des similarités entre 
+                        les données. L’algorithme choisit d’abord K centres aléatoirement, puis attribue chaque point 
+                        de données au centre le plus proche. Les centres sont ensuite réajustés jusqu’à stabilisation. 
+                        C’est un algorithme de regroupement non supervisé. Dans le cadre de ce projet, en groupe, 
+                        nous avions pour objectif de comprendre, interpréter et coder ces deux algorithmes. 
+                        Nous avons utilisé des bibliothèques Python afin de faciliter leur mise en œuvre.
+                    </p>
+                    <img src="image_a_inclure_page/photo_competence/kmeans_code_python.png" alt="Code Python de KMEANS">
+                </article>
+                <article class="article_explication_comp">
+                    <h3>Snake autonome</h3>
+                    <img src="image_a_inclure_page/photo_competence/snake102v2.png" alt="Image du code C du snake autonome">
+                    <p class="paragraphe_explication_comp">
+                        Si vous n’avez pas encore lu la partie sur le jeu du Snake en langage C, je vous recommande 
+                        vivement d’y jeter un œil avant de poursuivre la lecture. En effet, ce projet a évolué : notre 
+                        Snake est désormais autonome. Il est capable de se déplacer seul pour manger les pommes. À chaque 
+                        nouvelle version, le serpent devait surmonter de nouveaux obstacles ou optimiser ses déplacements, 
+                        notamment grâce à des raccourcis placés sur les bords du plateau. L’amélioration de ce programme 
+                        nous a confrontés à un code que nous n’avions pas écrit nous-mêmes, ce qui nous a forcés à analyser, 
+                        comprendre et restructurer une base existante. Nous avons fait le choix d’une approche algorithmique 
+                        totalement différente pour rendre le comportement du serpent plus efficace. Cette expérience nous 
+                        a permis de comparer plusieurs algorithmes dans le but d’atteindre un objectif plus rapidement — 
+                        une démarche essentielle dans le développement informatique.
+                    </p>
+                    <img src="image_a_inclure_page/photo_competence/snake2_execution.png" alt="Image du snake à la fin de l'exécution">
+                </article>
+            </section>
+        </div>
+        <div id="lien_competence" class="menu-container">
+            <button id="leftBtn">&lt;</button>
+            <div id="blocksContainer"></div>
+            <button id="rightBtn">&gt;</button>
+        </div>
+
+        <script>
+            const leftBtn = document.getElementById('leftBtn');
+            const rightBtn = document.getElementById('rightBtn');
+            const blocksContainer = document.getElementById('blocksContainer');
+
+            const allBlocks = [
+                {
+                    text: "Développer des applications informatiques simples",
+                    img: "image_a_inclure_page/photo_bloc_competence/progdappli.png",
+                    link: "Page_competence_1.html"
+                },
+                {
+                    text: "Appréhender et construire des algorithmes\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0",
+                    img: "image_a_inclure_page/photo_bloc_competence/comparaison%20algo.png",
+                    link: "Page_competence_2.html"
+                },
+                {
+                    text: "Installer et configurer un poste de travail\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0",
+                    img: "image_a_inclure_page/photo_bloc_competence/sae103.png",
+                    link: "Page_competence_3.html"
+                },
+                {
+                    text: "Concevoir et mettre en place une base de données",
+                    img: "image_a_inclure_page/photo_bloc_competence/sql.png",
+                    link: "Page_competence_4.html"
+                },
+                {
+                    text: "Identifier les besoins métiers des clients et des utilisateurs",
+                    img: "image_a_inclure_page/photo_bloc_competence/gestionproj.png",
+                    link: "Page_competence_5.html"
+                },
+                {
+                    text: "Identifier ses aptitudes pour travailler dans une équipe",
+                    img: "image_a_inclure_page/photo_bloc_competence/sae206.png",
+                    link: "Page_competence_6.html"
+                }
+            ];
+
+            let visibleIndexes = [0, 1, 2];
+            let hiddenIndexes = [3, 4, 5];
+
+            function renderBlocks() {
+                blocksContainer.innerHTML = '';
+                visibleIndexes.forEach(idx => {
+                const block = allBlocks[idx];
+
+                const article = document.createElement('article');
+                article.className = 'article_competences';
+
+                // Titre
+                const title = document.createElement('h3');
+                title.textContent = block.text;
+                title.style.marginBottom = '10px';
+
+                // Image
+                const img = document.createElement('img');
+                img.src = block.img;
+                img.alt = block.text;
+
+                // Lien cliquable en dessous
+                const link = document.createElement('a');
+                link.href = block.link;
+                link.textContent = "En savoir plus →";
+                link.style.marginTop = 'auto';
+
+                article.appendChild(title);
+                article.appendChild(img);
+                article.appendChild(link);
+                blocksContainer.appendChild(article);
+                });
+            }
+
+
+            function scrollRight() {
+                if (hiddenIndexes.length === 0) return;
+                const hideBlock = visibleIndexes.shift();
+                const showBlock = hiddenIndexes.shift();
+                visibleIndexes.push(showBlock);
+                hiddenIndexes.push(hideBlock);
+                renderBlocks();
+            }
+
+            function scrollLeft() {
+                if (hiddenIndexes.length === 0) return;
+                const hideBlock = visibleIndexes.pop();
+                const showBlock = hiddenIndexes.pop();
+                visibleIndexes.unshift(showBlock);
+                hiddenIndexes.unshift(hideBlock);
+                renderBlocks();
+            }
+
+            leftBtn.addEventListener('click', scrollLeft);
+            rightBtn.addEventListener('click', scrollRight);
+
+            renderBlocks();
+        </script>
+        <footer class="animated-background">
+            <h2 id="lien_contact">Mes informations : </h2>
+            <section>
+                <article>
+                    <p>
+                        Retrouvez-moi sur linkedin : <a href="https://www.linkedin.com/in/titouan-quill%C3%A9v%C3%A9r%C3%A9/">Titouan Quillévéré</a>
+                        <br>
+                        Mon numéro de téléphone : 06 85 35 15 05
+                        <br>
+                        Mon adresse mail : titouan.quillevere@gmail.com
+                    </p>
+                </article>
+            </section>
+            <h2>Mes références : </h2>
+            <section>
+                <article>
+                    <p>
+                        Université : <a href="https://iut-lannion.univ-rennes.fr/">IUT de Lannion</a> 22300 Côtes-d'Armor
+                        <br>
+                        Lycée : <a href="https://www.oceanopolis.com/">Elorn Landerneau</a> 29800 Finistère
+                        <br>
+                    </p>
+                </article>
+            </section>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="Page_principale.html">// home</a>
+                    </li>
+                    <li>
+                        <a href="Page_principale.html">// présentation</a>
+                    </li>
+                    <li>
+                        <a href="#lien_competence">// compétences</a>
+                    </li>
+                    <li>
+                        <a href="cv.pdf" download>// mon CV</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </body>
+</html>

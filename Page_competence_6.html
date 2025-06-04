@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html xmlns="titouan_quillevere.fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Portfolio de Titouan Quillévéré</title>
+        <link rel="stylesheet" href="Style_pp.css">
+        <Style>
+            .paragraphe_explication_comp{
+                width: 30em;
+            }
+
+            .article_explication_comp{
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: -10em;
+            }
+
+            .article_explication_comp > img{
+                margin-right: 1.5em;
+                margin-left: 1.5em;
+            }
+            section{
+                margin: 4em 0 2em 0;
+            }
+            .plage{
+                object-position: center;
+            }
+        </Style>
+    </head>
+    <body>
+        <header id="lien_acceuil"  class="animated-background">
+            <ul class="animated-background">
+                <li class="centrage">
+                    <a href="Page_principale.html">// home</a>
+                </li>
+                <li class="centrage">
+                    <a href="Page_principale.html">// présentation</a>
+                </li>
+                <li class="centrage">
+                    <a href="#lien_competence">// compétences</a>
+                </li>
+                <li class="contact">
+                    <a href="#lien_contact">// contact</a>
+                </li>
+                <li class="centrage">
+                    <a href="cv.pdf" download>// mon CV</a>
+                </li>
+                <li>
+                    <a class="lien_linkedin" href="https://www.linkedin.com/in/titouan-quill%C3%A9v%C3%A9r%C3%A9/"><img class="image_linkedin" src="image_a_inclure_page/autres/logo_linkedin.png" alt="Logo de linkedin"></a>
+                </li>
+            </ul>
+            <h2>Titouan Quillévéré</h2>
+            <h1>Identifier ses aptitudes pour travailler dans une équipe</h1>
+        </header>
+        <div>
+            <section>
+                <article class="article_explication_comp">
+                    <h3>Team Building</h3>
+                    <img src="image_a_inclure_page/photo_competence/sae206.png" alt="Image de l'infographie de notre team Building">
+                    <p class="paragraphe_explication_comp">
+                        Lors de la formation de BUT informatique, nous sommes préparés au mieux aux situations
+                        réel. En effet, une équipe de développeur qui doit développer un site ou une application
+                        doit attribuer au chacun des membres du département des taches qui seront lui 
+                        correspondre. Lors de ce projet, nous avons créé une journée de team building pour 
+                        une équipe d'informaticien. La création d'une infographie pour expliquer cette journée 
+                        est nécessaire. Pour donner envie à notre équipe de nous rejoindre au bord de la mer 
+                        dans les Côtes-d’Armor, nous avons réalisé un court-métrage explicatif. 
+                    </p>
+                    <img class="plage" src="image_a_inclure_page/photo_competence/photo_team_building.png" alt="Image du groupe sur la plage lors du team building">
+                </article>
+            </section>
+        </div>
+        <div id="lien_competence" class="menu-container">
+            <button id="leftBtn">&lt;</button>
+            <div id="blocksContainer"></div>
+            <button id="rightBtn">&gt;</button>
+        </div>
+
+        <script>
+            const leftBtn = document.getElementById('leftBtn');
+            const rightBtn = document.getElementById('rightBtn');
+            const blocksContainer = document.getElementById('blocksContainer');
+
+            const allBlocks = [
+                {
+                    text: "Développer des applications informatiques simples",
+                    img: "image_a_inclure_page/photo_bloc_competence/progdappli.png",
+                    link: "Page_competence_1.html"
+                },
+                {
+                    text: "Appréhender et construire des algorithmes\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0",
+                    img: "image_a_inclure_page/photo_bloc_competence/comparaison%20algo.png",
+                    link: "Page_competence_2.html"
+                },
+                {
+                    text: "Installer et configurer un poste de travail\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0",
+                    img: "image_a_inclure_page/photo_bloc_competence/sae103.png",
+                    link: "Page_competence_3.html"
+                },
+                {
+                    text: "Concevoir et mettre en place une base de données",
+                    img: "image_a_inclure_page/photo_bloc_competence/sql.png",
+                    link: "Page_competence_4.html"
+                },
+                {
+                    text: "Identifier les besoins métiers des clients et des utilisateurs",
+                    img: "image_a_inclure_page/photo_bloc_competence/gestionproj.png",
+                    link: "Page_competence_5.html"
+                },
+                {
+                    text: "Identifier ses aptitudes pour travailler dans une équipe",
+                    img: "image_a_inclure_page/photo_bloc_competence/sae206.png",
+                    link: "Page_competence_6.html"
+                }
+            ];
+
+            let visibleIndexes = [0, 1, 2];
+            let hiddenIndexes = [3, 4, 5];
+
+            function renderBlocks() {
+                blocksContainer.innerHTML = '';
+                visibleIndexes.forEach(idx => {
+                const block = allBlocks[idx];
+
+                const article = document.createElement('article');
+                article.className = 'article_competences';
+
+                // Titre (non cliquable)
+                const title = document.createElement('h3');
+                title.textContent = block.text;
+                title.style.marginBottom = '10px';
+
+                // Image
+                const img = document.createElement('img');
+                img.src = block.img;
+                img.alt = block.text;
+
+                // Lien cliquable en dessous
+                const link = document.createElement('a');
+                link.href = block.link;
+                link.textContent = "En savoir plus →";
+                link.style.marginTop = 'auto';
+
+                article.appendChild(title);
+                article.appendChild(img);
+                article.appendChild(link);
+                blocksContainer.appendChild(article);
+                });
+            }
+
+
+            function scrollRight() {
+                if (hiddenIndexes.length === 0) return;
+                const hideBlock = visibleIndexes.shift();
+                const showBlock = hiddenIndexes.shift();
+                visibleIndexes.push(showBlock);
+                hiddenIndexes.push(hideBlock);
+                renderBlocks();
+            }
+
+            function scrollLeft() {
+                if (hiddenIndexes.length === 0) return;
+                const hideBlock = visibleIndexes.pop();
+                const showBlock = hiddenIndexes.pop();
+                visibleIndexes.unshift(showBlock);
+                hiddenIndexes.unshift(hideBlock);
+                renderBlocks();
+            }
+
+            leftBtn.addEventListener('click', scrollLeft);
+            rightBtn.addEventListener('click', scrollRight);
+
+            renderBlocks();
+        </script>
+        <footer class="animated-background">
+            <h2 id="lien_contact">Mes informations : </h2>
+            <section>
+                <article>
+                    <p>
+                        Retrouvez-moi sur linkedin : <a href="https://www.linkedin.com/in/titouan-quill%C3%A9v%C3%A9r%C3%A9/">Titouan Quillévéré</a>
+                        <br>
+                        Mon numéro de téléphone : 06 85 35 15 05
+                        <br>
+                        Mon adresse mail : titouan.quillevere@gmail.com
+                    </p>
+                </article>
+            </section>
+            <h2>Mes références : </h2>
+            <section>
+                <article>
+                    <p>
+                        Université : <a href="https://iut-lannion.univ-rennes.fr/">IUT de Lannion</a> 22300 Côtes-d'Armor
+                        <br>
+                        Lycée : <a href="https://www.oceanopolis.com/">Elorn Landerneau</a> 29800 Finistère
+                        <br>
+                    </p>
+                </article>
+            </section>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="Page_principale.html">// home</a>
+                    </li>
+                    <li>
+                        <a href="Page_principale.html">// présentation</a>
+                    </li>
+                    <li>
+                        <a href="#lien_competence">// compétences</a>
+                    </li>
+                    <li>
+                        <a href="cv.pdf" download>// mon CV</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </body>
+</html>

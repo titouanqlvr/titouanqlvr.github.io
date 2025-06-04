@@ -1,0 +1,283 @@
+/* 
+    Inclusion des polices d'écriture
+*/
+
+@font-face {
+    font-family: "Inter";
+    src: url(inter/Inter-Light-BETA.otf);
+}
+
+.animated-background {
+    background: linear-gradient(-45deg, #2e2e2e, #4a4a4a, #6e6e6e, #2e2e2e);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    }
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+html{
+    font-family: "Inter";
+}
+
+body{
+    margin: 0%;
+}
+
+/*
+    Entete de la page
+*/
+
+header{
+    width: 100%;
+    height: 750px;
+    background-color: #5e5e5e;
+    background-size: cover;
+    margin-bottom: 1.5em;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+
+header > h1{
+    margin-left: 0.5em;
+}
+
+header > ul{
+    padding-top: 0.8em;
+    margin-top: 0;
+    height: 3em;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+}
+
+header > ul > li{
+    list-style-type: none;
+    margin-left: 2em;
+}
+
+.contact{
+    margin-left: 53em;
+    padding-top: 0.5em;
+}
+
+.centrage{
+    padding-top: 0.5em;
+}
+
+/*
+    Logo linkedin
+*/
+.lien_linkedin{
+    margin-left: -1em;
+    margin-right: 1em;
+}
+.image_linkedin{
+    height: 2em;
+    width: 2em;
+}
+
+li > a:hover{
+    text-decoration: underline;
+}
+
+header > h1{
+    font-size: 5em;
+}
+
+/**************************Zone de guerre*************************/
+
+
+/*
+    Contenus de la page
+*/
+h2{
+    margin-left: 2em;
+}
+
+.article_presentation, .article_formation{
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+}
+.article_presentation{
+    margin-left: 7em;
+}
+
+.paragraphe_presentation, .paragraphe_formation{
+    width: 40%;
+}
+
+.paragraphe_presentation{
+    margin-left: 1em;
+}
+.paragraphe_formation{
+    margin-right: 1em;
+}
+
+section > article > div > p > a{
+    color: black;
+}
+section > article > a{
+    color: black;
+    text-decoration: none;
+}
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+li > a{
+    color: white;
+    text-decoration: none;
+}
+section > article > a:hover, li > a:hover{
+    text-decoration: underline;
+}
+
+.photo_portrait, .imageIut{
+    width: 207.7812px;
+    height: 439.0848px;
+    object-fit: cover;
+    object-position: left;
+}
+
+h3{
+    margin: 0;
+}
+.article_competences{
+    padding: 0.8em;
+    margin: 1em;
+    width: 25em;
+    height: 25em;
+    background-color: lightgrey;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+section > article > img{
+    justify-self: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 18em;
+    height: 18em;
+    object-fit: cover;
+    object-position: top left;
+}
+
+
+/*
+    Pied de page
+*/
+
+footer{
+    height: 500px;
+    margin-top: 1.5em;
+    padding-top: 15px;  
+}
+
+footer > h2{
+    color: white;
+}
+
+footer > section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding-left: 20em;
+}
+
+footer > section > article > p, 
+footer > section > article > p > a{
+    text-decoration: none;
+    color: white;
+}
+
+footer > section > article > p > a:hover{
+    text-decoration: underline;
+}
+
+footer > nav > ul{
+    margin-top: 2em;
+    margin-right: 5em;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer > nav > ul > li{
+    margin-right: 1.5em;
+}
+
+
+
+/*********Menu defilant********/
+
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+
+button {
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#blocksContainer {
+    display: flex;
+    gap: 15px;
+}
+
+.article_competences a {
+    color: black;
+    text-decoration: none;
+}
+
+.article_competences a:hover{
+    color: black;
+    text-decoration: underline;
+}
+
+.article_competences {
+    padding: 0.8em;
+    margin: 1em;
+    width: 25em;
+    height: 25em;
+    background-color: lightgrey;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.article_competences img {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 18em;
+    height: 18em;
+    object-fit: cover;
+    object-position: top left;
+}
+
+.article_competences span {
+    font-size: 14px;
+    line-height: 1.4;
+}

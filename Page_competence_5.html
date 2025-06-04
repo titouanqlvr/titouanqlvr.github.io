@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html xmlns="titouan_quillevere.fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Portfolio de Titouan Quillévéré</title>
+        <link rel="stylesheet" href="Style_pp.css">
+        <Style>
+            .paragraphe_explication_comp{
+                width: 30em;
+            }
+
+            .article_explication_comp{
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: -10em;
+            }
+
+            .article_explication_comp > img{
+                margin-right: 1.5em;
+                margin-left: 1.5em;
+            }
+            section{
+                margin: 4em 0 2em 0;
+            }
+        </Style>
+    </head>
+    <body>
+        <header id="lien_acceuil"  class="animated-background">
+            <ul class="animated-background">
+                <li class="centrage">
+                    <a href="Page_principale.html">// home</a>
+                </li>
+                <li class="centrage">
+                    <a href="Page_principale.html">// présentation</a>
+                </li>
+                <li class="centrage">
+                    <a href="#lien_competence">// compétences</a>
+                </li>
+                <li class="contact">
+                    <a href="#lien_contact">// contact</a>
+                </li>
+                <li class="centrage">
+                    <a href="cv.pdf" download>// mon CV</a>
+                </li>
+                <li>
+                    <a class="lien_linkedin" href="https://www.linkedin.com/in/titouan-quill%C3%A9v%C3%A9r%C3%A9/"><img class="image_linkedin" src="image_a_inclure_page/autres/logo_linkedin.png" alt="Logo de linkedin"></a>
+                </li>
+            </ul>
+            <h2>Titouan Quillévéré</h2>
+            <h1>Identifier les besoins métiers des clients et des utilisateurs</h1>
+        </header>
+        <div>
+            <section>
+                <article class="article_explication_comp">
+                    <h3>Jeux Olympiques</h3>
+                    <img src="image_a_inclure_page/photo_competence/maquette_figma.png" alt="Image du Figma du site web">
+                    <p class="paragraphe_explication_comp">
+                        Le projet de développer un site web est un projet 
+                        très complet. En effet, dans le cadre de ce projet, 
+                        nous avons utilisé plusieurs méthodes de gestion de 
+                        projet pour réaliser le site internet des jeux olympiques 
+                        de Paris 2025. Tout a commencé avec le recueil des 
+                        besoins d’un client. Puis la conception d’une maquette 
+                        pour le site internet. Enfin, en utilisant les langages 
+                        HTML5 et CSS3, nous avons développé un site pour notre client. 
+                        L’objectif était de découvrir le travail de groupe, améliorer ses 
+                        compétences dans ce domaine-ci, travailler la communication pour 
+                        mener à bien ce projet.
+                    </p>
+                    <img src="image_a_inclure_page/photo_competence/web.png" alt="Image du code HTML pour la création du site web">
+                </article>
+                <article class="article_explication_comp">
+                    <h3>Appli EllaDanse</h3>
+                    <img src="image_a_inclure_page/photo_competence/gantt.png" alt="Image de gantt prévisionnel pour notre projet">
+                    <p class="paragraphe_explication_comp">
+                        La gestion de projet est indispensable pour atteindre au mieux son objectif. C’est pour 
+                        cela que, durant le mois de mai et de juin, en groupe, nous avons étudié le cas d’une 
+                        association de danse demandant une application pour gérer les événements, les membres 
+                        de l’association, etc. Nous avons donc rédigé plus livrables pour pouvoir mener à bien 
+                        notre projet. Nous avions besoin de découper les tâches à réaliser en lot. Y appliquer 
+                        la méthode de RACI (Responsable, Acteur, Consulter, Informer). Nous avons estimé la durée 
+                        de chaque tache afin de réaliser un Gantt prévisionnel pour le développement de notre 
+                        application. Ce projet nous force à communiquer dans un groupe, à gérer et comprendre 
+                        les besoins d’un client.
+                    </p>
+                    <img src="image_a_inclure_page/photo_competence/gestionproj.png" alt="Image de la matrice RACI">
+                </article>
+            </section>
+        </div>
+        <div id="lien_competence" class="menu-container">
+            <button id="leftBtn">&lt;</button>
+            <div id="blocksContainer"></div>
+            <button id="rightBtn">&gt;</button>
+        </div>
+
+        <script>
+            const leftBtn = document.getElementById('leftBtn');
+            const rightBtn = document.getElementById('rightBtn');
+            const blocksContainer = document.getElementById('blocksContainer');
+
+            const allBlocks = [
+                {
+                    text: "Développer des applications informatiques simples",
+                    img: "image_a_inclure_page/photo_bloc_competence/progdappli.png",
+                    link: "Page_competence_1.html"
+                },
+                {
+                    text: "Appréhender et construire des algorithmes\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0",
+                    img: "image_a_inclure_page/photo_bloc_competence/comparaison%20algo.png",
+                    link: "Page_competence_2.html"
+                },
+                {
+                    text: "Installer et configurer un poste de travail\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0",
+                    img: "image_a_inclure_page/photo_bloc_competence/sae103.png",
+                    link: "Page_competence_3.html"
+                },
+                {
+                    text: "Concevoir et mettre en place une base de données",
+                    img: "image_a_inclure_page/photo_bloc_competence/sql.png",
+                    link: "Page_competence_4.html"
+                },
+                {
+                    text: "Identifier les besoins métiers des clients et des utilisateurs",
+                    img: "image_a_inclure_page/photo_bloc_competence/gestionproj.png",
+                    link: "Page_competence_5.html"
+                },
+                {
+                    text: "Identifier ses aptitudes pour travailler dans une équipe",
+                    img: "image_a_inclure_page/photo_bloc_competence/sae206.png",
+                    link: "Page_competence_6.html"
+                }
+            ];
+
+            let visibleIndexes = [0, 1, 2];
+            let hiddenIndexes = [3, 4, 5];
+
+            function renderBlocks() {
+                blocksContainer.innerHTML = '';
+                visibleIndexes.forEach(idx => {
+                const block = allBlocks[idx];
+
+                const article = document.createElement('article');
+                article.className = 'article_competences';
+
+                // Titre (non cliquable)
+                const title = document.createElement('h3');
+                title.textContent = block.text;
+                title.style.marginBottom = '10px';
+
+                // Image
+                const img = document.createElement('img');
+                img.src = block.img;
+                img.alt = block.text;
+
+                // Lien cliquable en dessous
+                const link = document.createElement('a');
+                link.href = block.link;
+                link.textContent = "En savoir plus →";
+                link.style.marginTop = 'auto';
+
+                article.appendChild(title);
+                article.appendChild(img);
+                article.appendChild(link);
+                blocksContainer.appendChild(article);
+                });
+            }
+
+
+            function scrollRight() {
+                if (hiddenIndexes.length === 0) return;
+                const hideBlock = visibleIndexes.shift();
+                const showBlock = hiddenIndexes.shift();
+                visibleIndexes.push(showBlock);
+                hiddenIndexes.push(hideBlock);
+                renderBlocks();
+            }
+
+            function scrollLeft() {
+                if (hiddenIndexes.length === 0) return;
+                const hideBlock = visibleIndexes.pop();
+                const showBlock = hiddenIndexes.pop();
+                visibleIndexes.unshift(showBlock);
+                hiddenIndexes.unshift(hideBlock);
+                renderBlocks();
+            }
+
+            leftBtn.addEventListener('click', scrollLeft);
+            rightBtn.addEventListener('click', scrollRight);
+
+            renderBlocks();
+        </script>
+        <footer class="animated-background">
+            <h2 id="lien_contact">Mes informations : </h2>
+            <section>
+                <article>
+                    <p>
+                        Retrouvez-moi sur linkedin : <a href="https://www.linkedin.com/in/titouan-quill%C3%A9v%C3%A9r%C3%A9/">Titouan Quillévéré</a>
+                        <br>
+                        Mon numéro de téléphone : 06 85 35 15 05
+                        <br>
+                        Mon adresse mail : titouan.quillevere@gmail.com
+                    </p>
+                </article>
+            </section>
+            <h2>Mes références : </h2>
+            <section>
+                <article>
+                    <p>
+                        Université : <a href="https://iut-lannion.univ-rennes.fr/">IUT de Lannion</a> 22300 Côtes-d'Armor
+                        <br>
+                        Lycée : <a href="https://www.oceanopolis.com/">Elorn Landerneau</a> 29800 Finistère
+                        <br>
+                        
+                    </p>
+                </article>
+            </section>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="Page_principale.html">// home</a>
+                    </li>
+                    <li>
+                        <a href="Page_principale.html">// présentation</a>
+                    </li>
+                    <li>
+                        <a href="#lien_competence">// compétences</a>
+                    </li>
+                    <li>
+                        <a href="cv.pdf" download>// mon CV</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </body>
+</html>
